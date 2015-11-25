@@ -1,3 +1,13 @@
+[![Build Status](https://api.travis-ci.org/mochalov/dev-test.svg?branch=master)](https://travis-ci.org/mochalov/dev-test)
+
+Usage
+=============
+
+* Clone repository.
+* Execute `./gradlew build` to build the project. That will produce the artifact build/libs/GoEuroTest.jar.
+* Run the application with `java -jar GoEuroTest.jar CITY_NAME` and check out generated CITY_NAME.csv file.
+* The application writes all execution information to standard out. No log files are used. 
+
 Java Developer Test
 ===================
 
