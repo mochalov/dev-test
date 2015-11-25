@@ -1,0 +1,32 @@
+group 'com.devtrigger'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'application'
+apply plugin: 'idea'
+
+mainClassName = "com.devtrigger.goeuro.Application"
+
+jar {
+    manifest {
+        attributes "Main-Class": "$mainClassName"
+    }
+    archiveName = 'GoEuroTest.jar'
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_7
+targetCompatibility = JavaVersion.VERSION_1_7
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.apache.httpcomponents:httpclient:4.5.1'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.6.3'
+
+    testCompile 'junit:junit:4.11'
+    testCompile 'org.mockito:mockito-all:1.10.19'
+}

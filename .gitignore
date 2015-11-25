@@ -1,0 +1,12 @@
+.gradle
+
+/build
+
+# IDEA settings
+/.idea
+*.iml
+*.ids
+*.ipr
+*.iws
+
+.DS_Store
